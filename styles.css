@@ -1,0 +1,304 @@
+/* Reset and basic styling */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #1e2a38;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.language-btn {
+    background-color: #4a5a6d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-btn:hover {
+    background-color: #3b4b5c;
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #ffffff;
+}
+
+/* Game Selection Grid */
+#gameSelection {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-option {
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.game-option img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.game-option p {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.game-option:hover, .game-option.selected {
+    transform: scale(1.05);
+    border-color: #0056b3;
+}
+
+/* Selected Game Details */
+#gameDetails {
+    text-align: center;
+}
+
+#selectedGameImage {
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#keyCountGroup {
+    margin-bottom: 20px;
+}
+
+.key-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#keyRange {
+    flex-grow: 1;
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #28a745;
+    width: 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1e2a38;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .language-selector {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #gameSelection {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    #selectedGameImage {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .language-btn {
+        padding: 8px 16px;
+    }
+
+    #selectedGameImage {
+        height: 200px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Progress bar container */
+#modalProgress {
+    margin-top: 20px;
+}
+
+#modalProgressBar {
+    width: 0;
+    height: 20px;
+    background-color: #4CAF50;
+}
+
+/* Progress text */
+#modalProgressText {
+    margin-top: 5px;
+}
+
+/* AlertBox CSS */
+.alertbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.alertbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.alertbox.hidden {
+    display: none;
+}
+
+.alertbox button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.alertbox button:hover {
+    background-color: #0056b3;
+}

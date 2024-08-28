@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Key Generator for Hamster Games - Generate Hamster Keys</title>
+        <meta name="description" content="Generate keys for Hamster games easily and quickly with our tool. Create keys for titles like Bike Ride 3D, Chain Cube 2048, and more.">
+        <meta name="keywords" content="Hamster games key generator, Hamster key generator, generate Hamster game keys, Bike Ride 3D key, Chain Cube 2048 key, Train Miner key, Merge Away key, Twerk Race 3D key, Polysphere key, Mow and Trim key, Mud Racing key, Cafe Dash key, ساخت کلید همستر, کلید همستر, کلید بازی همستر, بازی های همستر, همستر, همستر تلگرام, کلید همستر امروز, کلید همستر امشب, کلید همستر کامبت, کلید همستر برای چیست, کلید همستر جدید, کلید همستر کمبات, کلید همستر پنجشنبه, کلید همستر یکشنبه, کلید همستر چیه, hamster key generator netlify, hamster key generator telegram, hamster key generator holder, hamster key generator site, hamster key generator bot github, hamster key generator web, hamster key generator twerk, hamster key generator bike, hamster key generator merge away, hamster key generator fast">
+        <meta name="robots" content="index, follow">        
+        <meta property="og:title" content="Key Generator for Hamster Games">
+        <meta property="og:description" content="Create keys for your favorite Hamster games quickly and efficiently. Our key generator tool supports various Hamster game titles.">
+        <meta property="og:image" content="https://cdn.hamsterkombat.io/bikeride/image.webp">
+        <meta property="og:url" content="https://hamsterkeygen.ir">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Hamster Games Key Generator">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Key Generator for Hamster Games">
+        <meta name="twitter:description" content="Generate Hamster game keys easily. Support for Bike Ride 3D, Chain Cube 2048, and other Hamster titles.">
+        <meta name="twitter:image" content="https://cdn.hamsterkombat.io/bikeride/image.webp">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="title">Key Generator for Hamster Games</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="gameSelection" class="grid-container">
+                <div class="game-option" data-game="1">
+                    <img src="https://cdn.hamsterkombat.io/bikeride/image.webp" alt="Bike Ride 3D">
+                    <p>Bike Ride 3D</p>
+                </div>
+                <div class="game-option" data-game="2">
+                    <img src="https://cdn.hamsterkombat.io/chain_cube/image.webp" alt="Chain Cube 2048">
+                    <p>Chain Cube 2048</p>
+                </div>
+                <div class="game-option" data-game="4">
+                    <img src="https://cdn.hamsterkombat.io/train_miner/image.webp" alt="Train Miner">
+                    <p>Train Miner</p>
+                </div>
+                <div class="game-option" data-game="5">
+                    <img src="https://cdn.hamsterkombat.io/merge_away/image.webp" alt="Merge Away">
+                    <p>Merge Away</p>
+                </div>
+                <div class="game-option" data-game="6">
+                    <img src="https://cdn.hamsterkombat.io/twerk/image.webp" alt="Twerk Race 3D">
+                    <p>Twerk Race 3D</p>
+                </div>
+                <div class="game-option" data-game="7">
+                    <img src="https://cdn.hamsterkombat.io/polysphere/image.webp" alt="Polysphere">
+                    <p>Polysphere</p>
+                </div>
+                <div class="game-option" data-game="8">
+                    <img src="https://cdn.hamsterkombat.io/mow_trim/image.webp" alt="Mow and Trim">
+                    <p>Mow and Trim</p>
+                </div>
+                <div class="game-option" data-game="9">
+                    <img src="https://cdn.hamsterkombat.io/mud_racing/image.webp" alt="Mud Racing">
+                    <p>Mud Racing</p>
+                </div>
+                <div class="game-option" data-game="10">
+                    <img src="https://cdn.hamsterkombat.io/cafe_dash/image.webp" alt="Cafe Dash">
+                    <p>Cafe Dash</p>
+                </div>
+            </div>
+
+            <div id="gameDetails" class="hidden">
+                <img id="selectedGameImage" src="" alt="Selected Game">
+                <div id="keyCountGroup" class="hidden">
+                    <label id="keyCountLabel">Number of keys:</label>
+                    <div class="key-slider">
+                        <input type="range" id="keyRange" min="1" max="10" value="1">
+                        <span id="keyValue">1</span>
+                    </div>
+                </div>
+                <button id="startBtn" class="hidden">Start Generating</button>
+                <div id="progressContainer" class="progress-bar hidden">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="progressText" class="hidden">0%</p>
+                <p id="progressLog" class="hidden"></p>
+                <div id="keyContainer" class="hidden">
+                    <h2 id="generatedKeysTitle">Generated Keys:</h2>
+                    <div id="keysList"></div>
+                    <button id="copyAllBtn" class="hidden">Copy All</button>
+                </div>
+                <p id="copyStatus" class="hidden">Copied to clipboard!</p>
+                <button id="generateMoreBtn" class="hidden">Generate More</button>
+            </div>
+        </div>
+        <div id="progressModal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modalMessage">Generating keys, please be patient...</p>
+                <div id="modalProgress">
+                    <div id="modalProgressBar"></div>
+                    <p id="modalProgressText">0%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Key Generator for Hamster Games</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
